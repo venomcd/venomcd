@@ -1,0 +1,211 @@
+/*-----Portada-----*/
+
+.article-container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/city3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.article-container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(67, 202, 252, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+.container-cover-info{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;    
+}
+
+.container-cover-info h1{
+    font-size: 60px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.container-cover-info p{
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.contenedor {
+    width: 100%;
+    margin: auto;
+}
+.contenedor--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.column {
+    width: 100%;
+}
+
+/*---Container Contenido del Articulo ---*/
+
+.container-content{
+    min-width: 375px;
+    width: 1280px;
+    margin: auto;
+    margin-top: 40px;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px color black;
+    border-radius: 6px;
+    /*position: relative;*/
+    overflow: hidden;
+    background: #fff;
+    
+}
+
+article:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #62B1F8;
+}
+
+article h1{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3c3c3c;
+}
+
+article img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.download-file button, .download-program button{
+    margin-top: 30px;
+    margin-left: 180px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: #46A2FD;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.download-file button:hover, .download-program button:hover{
+    opacity: 0.8;
+}
+
+/*----- Articulos Relacionados -----*/
+
+.container-aside aside{
+    width: 320px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    background: #fff;
+}
+
+.container-aside aside img{
+    width: 100%;
+}
+
+.container-aside aside h2, p{
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.container-aside aside button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: #5FBEFF;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.container-aside aside button:hover{
+    color: #fff;
+    background: #000;
+}
+
+/*----Diseño Responsive-----*/
+
+@media screen and (max-width: 1220px){
+    .container-content {
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .container-content{
+    width: 100%;
+    flex-direction: column;    
+    }
+    
+    article{
+    box-shadow: 0 0 0 0;    
+    }
+    
+    .container-aside{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .container-aside{
+        flex-wrap: wrap;
+    }
+    
+    #icon-menu{
+        right: 20px;
+    }
+    
+}
